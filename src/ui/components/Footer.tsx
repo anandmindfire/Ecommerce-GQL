@@ -4,12 +4,11 @@ import { ChannelSelect } from "./ChannelSelect";
 import { ChannelsListDocument } from "@/gql/graphql";
 import { executeGraphQL } from "@/lib/graphql";
 
-export async function Footer({ channel }: { channel: string }) {
+export async function Footer({}: { channel: string }) {
 	// const footerLinks = await executeGraphQL(MenuGetBySlugDocument, {
 	// 	variables: { slug: "footer", channel },
 	// 	revalidate: 60 * 60 * 24,
 	// });
-
 	const channels = process.env.SALEOR_APP_TOKEN
 		? await executeGraphQL(ChannelsListDocument, {
 				withAuth: false, // disable cookie-based auth for this call
