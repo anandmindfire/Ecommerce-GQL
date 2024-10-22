@@ -1,5 +1,6 @@
 import { ProductListByCollectionDocument } from "@/gql/graphql";
 import { executeGraphQL } from "@/lib/graphql";
+import { Banner } from "@/ui/components/Banner";
 import { ProductList } from "@/ui/components/ProductList";
 
 export const metadata = {
@@ -24,8 +25,11 @@ export default async function Page({ params }: { params: { channel: string } }) 
 	const products = data.collection?.products.edges.map(({ node: product }) => product);
 
 	return (
-		<section className="mx-auto max-w-7xl p-8 pb-16">
-			<h2 className="sr-only">Product list</h2>
+		<section className="mx-auto max-w-7xl p-2 pb-16">
+			<div className="mb-6">
+				<Banner />
+			</div>
+
 			<ProductList products={products} />
 		</section>
 	);
