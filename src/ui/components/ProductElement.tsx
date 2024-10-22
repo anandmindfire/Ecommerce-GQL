@@ -15,7 +15,7 @@ export function ProductElement({
   return (
     <li data-testid="ProductElement">
       <LinkWithChannel href={`/products/${product.slug}`} key={product.id}>
-        <div className="rounded-md bg-white p-0.5 shadow-lg">
+        <div className="rounded-md bg-white p-0.5 shadow-md">
           {product?.thumbnail?.url && (
             <ProductImageWrapper
               loading={loading}
