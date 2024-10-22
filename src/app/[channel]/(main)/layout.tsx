@@ -4,7 +4,7 @@ import { Header } from "@/ui/components/Header";
 
 export const metadata = {
   title: "Ecom",
-  description: "e-commerce experiences with Saleor.",
+  description: "e-commerce",
 };
 
 export default function RootLayout(props: {
