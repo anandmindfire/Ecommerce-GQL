@@ -1,4 +1,4 @@
-import { LinkWithChannel } from "../atoms/LinkWithChannel";
+// import { LinkWithChannel } from "../atoms/LinkWithChannel";
 import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
 
 import type { ProductListItemFragment } from "@/gql/graphql";
@@ -14,8 +14,8 @@ export function ProductElement({
 }) {
   return (
     <li data-testid="ProductElement">
-      <LinkWithChannel href={`/products/${product.slug}`} key={product.id}>
-        <div className="rounded-md bg-white p-0.5 shadow-md">
+      <div key={product.id}>
+        <div className="rounded-md bg-white p-0.5 shadow-md cursor-pointer">
           {product?.thumbnail?.url && (
             <ProductImageWrapper
               loading={loading}
@@ -50,7 +50,7 @@ export function ProductElement({
             </p>
           </div>
         </div>
-      </LinkWithChannel>
+      </div>
     </li>
   );
 }
