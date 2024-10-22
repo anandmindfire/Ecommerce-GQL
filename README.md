@@ -4,7 +4,17 @@
 
 ## Development
 
-To start the development server, run the following:
+### Install Dependencies
+
+To install the project dependencies, run the following:
+
+```bash
+pnpm i
+```
+
+### Start the Development Server
+
+Once dependencies are installed, start the development server:
 
 ```bash
 pnpm dev
@@ -12,18 +22,22 @@ pnpm dev
 
 The app is now running at `http://localhost:3000`.
 
-> NOTE:
-> Saleor Storefront is a Next.js app. In case you are not familiar with Next.js, we recommend you to read the [Next.js documentation](https://nextjs.org/docs) (make sure you've selected "Using App Router" in the sidebar).
+### Features
 
-#### GraphQL queries and mutations:
+- **Navbar**: Includes three categories: All, Apparel, and Accessories.
+- **Search Bar**: Allows users to search for products.
+- **Homepage**:
+  - A banner is displayed at the top.
+  - Products are listed below the banner.
 
-After altering or creating new GraphQL queries in `gql` folder, you need to run the following command to generate types and javascript queries:
+### GraphQL Queries and Mutations
+
+The app uses the Saleor public API for fetching data. After altering or creating new GraphQL queries in the `gql` folder, you need to run the following command to generate types and JavaScript queries:
 
 ```bash
 pnpm run generate
 ```
 
-### Preview content changes instantly (Draft Mode)
+### Preview Content Changes Instantly (Draft Mode)
 
-Visit `http://{your-host}/api/draft` to enable cookies that disable caching to preview catalog and content changes instantly. [Learn more about the Draft Mode in Next.js docs.](https://nextjs.org/docs/app/building-your-application/configuring/draft-mode)
-
+Visit `http://{your-host}/api/draft` to enable cookies that disable caching and preview catalog and content changes instantly. [Learn more about Draft Mode in Next.js docs.](https://nextjs.org/docs/app/building-your-application/configuring/draft-mode)
