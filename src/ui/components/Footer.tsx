@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // import { LinkWithChannel } from "../atoms/LinkWithChannel";
 import { ChannelSelect } from "./ChannelSelect";
-import { ChannelsListDocument, MenuGetBySlugDocument } from "@/gql/graphql";
+import { ChannelsListDocument } from "@/gql/graphql";
 import { executeGraphQL } from "@/lib/graphql";
 
 export async function Footer({ channel }: { channel: string }) {
